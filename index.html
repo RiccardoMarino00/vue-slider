@@ -25,7 +25,6 @@
                     
                 </div>
                 
-              
                 
                
 
@@ -33,7 +32,7 @@
                     <div class="prev" @click="prevImg()"></div>
                     <div class="next" @click="nextImg()"></div>
                     <div class="thumb" v-for="(element, i) in slides" :class="i === currentIndex ? 'active' : '' ">
-                        <img :src="slides[currentIndex].image" alt="Svezia" />
+                        <img :src="slides[i].image" alt="Svezia" />
                     </div>
                     <!-- <div class="thumb">
                         <img src="img/02.webp" alt="Ratchet & Clank" />
