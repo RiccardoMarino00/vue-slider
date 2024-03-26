@@ -14,11 +14,67 @@
     <div id="app">
 
         <div class="container">
-            <div class="slider-wrapper" tabindex="0" >
+            <div class="slider-wrapper"  >
                
-
-                <div class="item" v-for="element in slides">
+                <!-- <div class="item" v-for="(i, element) in slides">
+                    <img v-bind:src= "element.image" />
+                    <div class="text">
+                        <h3>{{element.title}}</h3>
+                        <p>
+                            {{element.text}}
+                        </p>
+                    </div>
+                </div> -->
+                <div class="item" v-if="currentIndex === 0">
                     <img src="img/01.webp" alt="Spiderman" />
+                    <div class="text">
+                        <h3>Spiderman</h3>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit
+                            tempore aliquid deleniti aut
+                            veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum
+                            corporis.
+                        </p>
+                    </div>
+                </div>
+                <div class="item" v-else-if="currentIndex === 1">
+                    <img src="img/02.webp" alt="Spiderman" />
+                    <div class="text">
+                        <h3>Spiderman</h3>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit
+                            tempore aliquid deleniti aut
+                            veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum
+                            corporis.
+                        </p>
+                    </div>
+                </div>
+                <div class="item" v-else-if="currentIndex === 2">
+                    <img src="img/03.webp" alt="Spiderman" />
+                    <div class="text">
+                        <h3>Spiderman</h3>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit
+                            tempore aliquid deleniti aut
+                            veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum
+                            corporis.
+                        </p>
+                    </div>
+                </div>
+                <div class="item" v-else-if="currentIndex === 3">
+                    <img src="img/04.webp" alt="Spiderman" />
+                    <div class="text">
+                        <h3>Spiderman</h3>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit
+                            tempore aliquid deleniti aut
+                            veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum
+                            corporis.
+                        </p>
+                    </div>
+                </div>
+                <div class="item" v-else="currentIndex === 4">
+                    <img src="img/05.webp" alt="Spiderman" />
                     <div class="text">
                         <h3>Spiderman</h3>
                         <p>
@@ -33,8 +89,8 @@
                
 
                 <div class="thumbs">
-                    <div class="prev"></div>
-                    <div class="next"></div>
+                    <div class="prev" @click="prevImg()"></div>
+                    <div class="next" @click="nextImg()"></div>
                     <div class="thumb active">
                         <img src="img/01.webp" alt="Svezia" />
                     </div>
