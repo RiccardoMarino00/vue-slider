@@ -33,7 +33,7 @@ const { createApp } = Vue
     methods: {
         nextImg (){
             lastIndex= 4
-            currentIndex = 0
+            currentIndex = i
             console.log(currentIndex)
             if (currentIndex < lastIndex){
                 currentIndex++
@@ -42,7 +42,7 @@ const { createApp } = Vue
         },
         prevImg (){
             lastIndex= 4
-            currentIndex = 0
+            currentIndex = i
             if (currentIndex > 0){
                 currentIndex--
             } else {
