@@ -17,13 +17,14 @@
             <div class="slider-wrapper"  >
                
                 <div class="item" v-for="(i, element) in slides">
-                    <img  :src= "element.image" />
-                    <div class="text">
-                        <h3>{{element.title}}</h3>
-                        <p>
-                            {{element.text}}
-                        </p>
+                    <div v-if="currentIndex === i">
+                        <img :src= "slides[currentIndex]" />
+                        <div class="text">
+                            <h3>{{slides[currentIndex].title}}</h3>
+                            <p>{{slides[currentIndex].text}}</p>
+                        </div>
                     </div>
+                    
                 </div>
                 
               

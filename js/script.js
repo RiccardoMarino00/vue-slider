@@ -3,8 +3,8 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        lastIndex: 4,
         currentIndex : 0,
+        lastIndex: 4,
         slides : [
             {
                 image: './img/01.webp',
@@ -28,27 +28,26 @@ const { createApp } = Vue
                 text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
             }
         ],
+
       }
     },
     methods: {
         nextImg (){
             lastIndex= 4
-            currentIndex = i
-            console.log(currentIndex)
-            if (currentIndex < lastIndex){
-                currentIndex++
-            } else currentIndex = 0;
-            console.log(currentIndex)
+            if (this.currentIndex < lastIndex){
+                this.currentIndex++
+            } else this.currentIndex = 0;
+            return this.currentIndex
+            
         },
         prevImg (){
             lastIndex= 4
-            currentIndex = i
-            if (currentIndex > 0){
+            if (this.currentIndex > 0){
                 currentIndex--
             } else {
-                currentIndex = lastIndex
+                this.currentIndex = lastIndex
             }
-            console.log(currentIndex)
+            return this.currentIndex
 
         }
     }
