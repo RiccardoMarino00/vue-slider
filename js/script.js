@@ -36,14 +36,16 @@ const { createApp } = Vue
             lastIndex= 4
             if (this.currentIndex < lastIndex){
                 this.currentIndex++
-            } else this.currentIndex = 0;
+            } else {
+                this.currentIndex = 0;
+            } 
             return this.currentIndex
             
         },
         prevImg (){
             lastIndex= 4
             if (this.currentIndex > 0){
-                currentIndex--
+                this.currentIndex--
             } else {
                 this.currentIndex = lastIndex
             }
