@@ -1,3 +1,10 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -37,11 +44,14 @@
     height: 550px;
     background: #000;
     position: relative;
+    transition:ease-in-out;
+
 }
 
 .thumb {
     height: calc((550px) / 5);
     opacity: 0.5;
+    cursor: pointer;
 }
 
 .thumb img {
